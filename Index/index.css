@@ -1,0 +1,30 @@
+body {
+  background-color: whitesmoke;
+}
+
+.header {
+  background-color: cornflowerblue;
+  height: 150px;
+  display: block;
+}
+
+.logo {
+}
+
+.About {
+  width: 100px;
+  float: left;
+  height: 300px;
+  border-style: solid;
+}
+
+.News {
+  width: 200px;
+  float: left;
+  height: 300px;
+  border-style: solid;
+}
+
+.clear {
+  clear: both;
+}
