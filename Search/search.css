@@ -28,11 +28,6 @@ body {
   font-family: fantasy;
 }
 
-/* .header a:hover {
-  background-color: white;
-  color: black;
-} */
-
 .header a.active {
   background-color: white;
   color: black;
@@ -52,40 +47,4 @@ body {
   .header-right {
     float: none;
   }
-}
-
-.About {
-  width: 60%;
-  float: left;
-  margin-left: 3%;
-  height: 800px;
-  /* border-style: solid; */
-}
-
-.News {
-  width: 30%;
-  float: right;
-  margin-right: 2%;
-  margin-top: 2%;
-  height: 800px;
-  border-style: solid;
-  border-color: #0074d9;
-  border-radius: 2%;
-}
-
-.clear {
-  clear: both;
-}
-
-.logo-image {
-  margin-left: 42%;
-  margin-top: -4%;
-  margin-top: 1%;
-}
-
-.summary {
-  float: left;
-  margin-top: -3%;
-  font-size: 20px;
-  color: black;
 }
