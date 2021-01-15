@@ -48,3 +48,42 @@ body {
     float: none;
   }
 }
+
+.movie-container {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 3%;
+  height: 60%;
+}
+
+.single-movie-container {
+  border-style: ridge;
+  margin-bottom: 3%;
+  height: 150px;
+}
+
+.image {
+  float: left;
+  padding-left: 2%;
+  padding-top: 2%;
+  width: 100px;
+}
+
+.info-container {
+  padding-left: 11%;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 18px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.date {
+  color: grey;
+  padding-bottom: 3%;
+}
+
+.info {
+}
