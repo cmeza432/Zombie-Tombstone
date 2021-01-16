@@ -24,7 +24,7 @@ body {
 .header a.Name {
   font-size: 45px;
   font-weight: bold;
-  margin-left: 40%;
+  margin-left: 38%;
   font-family: fantasy;
 }
 
@@ -52,38 +52,41 @@ body {
 .movie-container {
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 3%;
+  margin-top: 8%;
   height: 60%;
 }
 
 .single-movie-container {
   border-style: ridge;
-  margin-bottom: 3%;
+  border-radius: 20px;
+  margin-bottom: 5%;
   height: 150px;
+  background-color: white;
 }
 
 .image {
   float: left;
-  padding-left: 2%;
-  padding-top: 2%;
-  width: 100px;
+  /* padding-left: 1%;
+  padding-top: 2%; */
+  width: 120px;
+  height: 150px;
 }
 
 .info-container {
+  text-align: left;
   padding-left: 11%;
+  padding-right: 3%;
 }
 
 .title {
   font-weight: bold;
   font-size: 18px;
   padding-top: 1%;
-  padding-bottom: 1%;
 }
 
 .date {
-  color: grey;
-  padding-bottom: 3%;
+  color: dimgrey;
+  padding-bottom: 4%;
 }
-
 .info {
 }
