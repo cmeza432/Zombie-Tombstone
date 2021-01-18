@@ -107,6 +107,7 @@ body {
   text-align: center;
   margin-top: 10%;
   margin-bottom: 16%;
+  color: #0074d9;
 }
 
 .summary {
@@ -115,20 +116,21 @@ body {
 }
 
 .single-movie-container {
-  border-style: solid;
+  border-style: outset;
   border-radius: 10px;
-  border-color: #0074d9;
   background-color: white;
   position: static;
   margin-left: 2%;
   height: 350px;
   width: 700px;
+  box-shadow: 6px 10px 15px #0074d9;
 }
 
 .image {
   float: left;
   width: 220px;
   height: 350px;
+  border-radius: 8px;
 }
 
 .info-container {
@@ -143,6 +145,7 @@ body {
   font-size: 30px;
   font-style: italic;
   padding-top: 2%;
+  color: #0074d9;
 }
 
 .date {
@@ -154,4 +157,5 @@ body {
 
 .info {
   text-align: center;
+  font-style: oblique;
 }

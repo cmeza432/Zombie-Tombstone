@@ -57,17 +57,17 @@ body {
 }
 
 .single-movie-container {
-  border-style: ridge;
+  border-style: outset;
   border-radius: 20px;
   margin-bottom: 5%;
   height: 150px;
   background-color: white;
+  box-shadow: 6px 10px 15px #0074d9;
 }
 
 .image {
   float: left;
-  /* padding-left: 1%;
-  padding-top: 2%; */
+  border-radius: 16px;
   width: 120px;
   height: 150px;
 }
@@ -82,6 +82,7 @@ body {
   font-weight: bold;
   font-size: 18px;
   padding-top: 1%;
+  color: #0074d9;
 }
 
 .date {
@@ -89,4 +90,5 @@ body {
   padding-bottom: 4%;
 }
 .info {
+  font-style: oblique;
 }

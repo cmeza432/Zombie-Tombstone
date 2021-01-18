@@ -23,6 +23,7 @@ function populatePage(movieInfo){
     var movieElement = document.getElementById('movie-container');
     var end;
     var date;
+    var imagePath;
     
     // Loop through ten movies and display their information
     for(var i = 0; i < 15; i++){
@@ -37,17 +38,22 @@ function populatePage(movieInfo){
             date = movieInfo[i].release_date = "N/A";
         else{
             // Convert the date information to easier date format
-            console.log(movieInfo[i].release_date.substring(0,4));
             var year = movieInfo[i].release_date.substring(0,4);
             var day = movieInfo[i].release_date.substring(8);
             var month = movieInfo[i].release_date.substring(5, 7);
             date = months[parseInt(month) - 1]['month'] + " " + day + ", " + year;
         }
 
+        // Check for image path, if null return default image
+        if(movieInfo[i].poster_path != null)
+            imagePath = "https://www.themoviedb.org/t/p/w94_and_h141_bestv2" + movieInfo[i].poster_path;
+        else
+            imagePath = "/images/NoImage.png";
+
         // Movie HTML information
         movieElement.innerHTML = movieElement.innerHTML +
         "<div class=\"single-movie-container\">" +
-            "<img src=\"/images/NoImage.png\"class=\"image\" id=\"image\">" +
+            "<img src=\"" + imagePath + "\"class=\"image\" id=\"image\">" +
             "<div class=\"info-container\" id=\"info-container\">" +
                 "<div class=\"title\" id=\"title\">" + movieInfo[i].original_title + "</div>" +
                 "<div class=\"date\" id=\"date\">Release Date: " + date + "</div>" +
@@ -60,7 +66,9 @@ function populatePage(movieInfo){
 // Function will hit the TMDB api and get the horror movies data
 function getMovies(){
     const Http = new XMLHttpRequest();
-    const url = "https://api.themoviedb.org/3/discover/movie?api_key=0fc9b284e50c7c1b6f53c66f03c6cb58&language=en-US&sort_by=primary_release_date.desc&include_adult=false&include_video=false&page=1&with_genres=27"
+    // API url sorted in popularity by default --> primary_release_date is also another variable
+    const url = "https://api.themoviedb.org/3/discover/movie?api_key=0fc9b284e50c7c1b6f53c66f03c6cb58&language=en-US&" +
+        "sort_by=popularity.desc&include_adult=false&include_video=false&page=1&page=1&with_genres=27"
     // When the state changes, parse data into json and call the populating page function
     Http.onreadystatechange=function(){
         if (Http.readyState==4 && Http.status==200){
