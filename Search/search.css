@@ -1,5 +1,5 @@
 body {
-  background-color: whitesmoke;
+  background-color: #3d3c3a;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -26,11 +26,12 @@ body {
   font-weight: bold;
   margin-left: 38%;
   font-family: fantasy;
+  color: black;
 }
 
 .header a.active {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
 }
 
 .header-right {
@@ -50,31 +51,31 @@ body {
 }
 
 .movie-container {
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 8%;
+  margin-left: 12%;
+  margin-right: 12%;
+  margin-top: 4%;
   height: 60%;
 }
 
 .single-movie-container {
-  border-style: outset;
+  border-style: hidden;
   border-radius: 20px;
   margin-bottom: 5%;
   height: 150px;
-  background-color: white;
+  background-color: #0c090a;
   box-shadow: 6px 10px 15px #0074d9;
 }
 
 .image {
   float: left;
   border-radius: 16px;
-  width: 120px;
+  width: 100px;
   height: 150px;
 }
 
 .info-container {
   text-align: left;
-  padding-left: 11%;
+  padding-left: 8%;
   padding-right: 3%;
 }
 
@@ -86,9 +87,95 @@ body {
 }
 
 .date {
-  color: dimgrey;
+  color: #837e7c;
   padding-bottom: 4%;
+  font-style: oblique;
 }
 .info {
-  font-style: oblique;
+  color: white;
+}
+
+.sort {
+  margin-top: 1%;
+  text-align: center;
+}
+
+.order {
+  font-size: 22px;
+  font-weight: bold;
+  border-style: hidden;
+  background-color: #3d3c3a;
+  color: #0074d9;
+}
+
+.line {
+  border: 0.2px dotted #0074d9;
+  margin-top: 1%;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.submit {
+  width: 400px;
+  height: 60px;
+  border-style: hidden;
+  border-radius: 20px;
+  font-size: 30px;
+  margin-top: 5%;
+  margin-bottom: 8%;
+  background-color: #0074d9;
+  color: white;
+}
+
+.submit:hover {
+  background-color: black;
+  color: white;
+  box-shadow: 0 12px 16px 0 #0074d9, 0 17px 50px 0 #0074d9;
+}
+
+.submit span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.submit span:after {
+  content: "\21E9";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.submit:hover span {
+  padding-right: 50px;
+}
+
+.submit:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.footer {
+  background-color: #0074d9;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.footer-info {
+  font-size: 15px;
+  text-align: center;
+  color: white;
+}
+
+.footer-image {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50px;
 }

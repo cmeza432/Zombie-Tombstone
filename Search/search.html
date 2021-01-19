@@ -19,9 +19,28 @@
     </div>
 
     <!-- Div that will hold the page sorted drop down -->
+    <div class="sort">
+        <select name="order" id="order" class="order" onChange="sortMovies(this.value)">
+            <option class="popularity" value="popularity">Popularity</option>
+            <option class="release-date" value="primary_release_date">Release Date</option>
+        </select>
+    </div>
+
+    <hr class="line">
 
     <!-- Div for next two boxes, one containing about summary, the other scroll of news -->
     <div class="movie-container" id="movie-container">
+    </div>
+
+    <!-- Button to load more movies -->
+    <div class="button-container">
+        <button class="submit" onclick="loadMore()"><span>Load More</span></button>
+    </div>
+
+    <!-- Footer for info and image -->
+    <div class="footer">
+        <p class="footer-info">Created by Carlos Meza</p>
+        <img src="https://image.flaticon.com/icons/svg/547/547432.svg" class="footer-image">
     </div>
 
     <script src="search.js"></script>

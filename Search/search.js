@@ -1,5 +1,7 @@
-// Load this file as soon as webpage opens
-window.onload = getMovies();
+// Get the elements from html page
+var movieElement = document.getElementById('movie-container');
+var pageNumber = 1;
+var sorted = "popularity";
 
 // Date values for conversion
 var months = [
@@ -17,10 +19,11 @@ var months = [
     {"month" : "December"}
 ]
 
+// Load this file as soon as webpage opens
+window.onload = getMovies();
+
 // This function will be used to populate the page once data is retrieved
 function populatePage(movieInfo){
-    // Get the elements from html page
-    var movieElement = document.getElementById('movie-container');
     var end;
     var date;
     var imagePath;
@@ -68,7 +71,7 @@ function getMovies(){
     const Http = new XMLHttpRequest();
     // API url sorted in popularity by default --> primary_release_date is also another variable
     const url = "https://api.themoviedb.org/3/discover/movie?api_key=0fc9b284e50c7c1b6f53c66f03c6cb58&language=en-US&" +
-        "sort_by=popularity.desc&include_adult=false&include_video=false&page=1&page=1&with_genres=27"
+        "sort_by=" + sorted + ".desc&include_adult=false&include_video=false&page=1&page=" + pageNumber.toString() + "&with_genres=27"
     // When the state changes, parse data into json and call the populating page function
     Http.onreadystatechange=function(){
         if (Http.readyState==4 && Http.status==200){
@@ -78,4 +81,18 @@ function getMovies(){
     }
     Http.open("GET", url);
     Http.send();
+}
+
+// Function will get value of preferred sorted method and pass that into getMovies for API
+function sortMovies(value){
+    movieElement.innerHTML = "";
+    pageNumber = 1;
+    sorted = value;
+    getMovies();
+}
+
+// Function that will be called when user wants to load more movies
+function loadMore(){
+    pageNumber = pageNumber + 1;
+    getMovies();
 }
