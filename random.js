@@ -46,7 +46,7 @@ function showRecommendation(movieInfo){
     if(movieInfo[i].poster_path != null)
         imagePath = "https://www.themoviedb.org/t/p/w94_and_h141_bestv2" + movieInfo[i].poster_path;
     else
-        imagePath = "https://www.flaticon.com/svg/vstatic/svg/2471/2471920.svg?token=exp=1611251581~hmac=de61854b684b62a2e545eec824824a44";
+        imagePath = "images/notFound.png";
 
     // Movie HTML information
     movieElement.innerHTML =
