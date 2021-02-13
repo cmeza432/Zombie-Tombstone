@@ -55,8 +55,8 @@ function showRecommendation(movieInfo){
         "<div class=\"info-container\" id=\"info-container\">" +
             "<div class=\"movie-title\" id=\"title\">" + movieInfo[i].original_title + "</div>" +
             "<div class=\"date\" id=\"date\">Release Date: " + date + "</div>" +
-            "<div class=\"info\" id=\"info\">" + movieInfo[i].overview.substring(0, 235) + end + "</div>" +
-        "</div>" +
+        "</div>" + 
+        "<div class=\"info\" id=\"info\">" + movieInfo[i].overview.substring(0, 235) + end + "</div>" +
     "</div>";
 }
 

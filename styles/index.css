@@ -1,55 +1,72 @@
 body {
-  background-color: #3d3c3a;
+  background-color: whitesmoke;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .header {
-  background-color: #0074d9;
+  background-color: #0c090a;
   overflow: hidden;
-  padding: 1.5vw 3vw;
+  padding: 0.5vw 1vw;
 }
 
-.header a {
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+.name {
+  font-size: 2.5vw;
+  font-weight: bold;
+  color: crimson;
   float: left;
-  color: white;
+  margin: 1vw;
+}
+
+ul {
+  float: right;
+  list-style-type: none;
+  margin: 2vw;
+}
+
+li {
+  display: inline;
+  padding: 0.5vw;
+}
+
+li a {
+  color: crimson;
   text-align: center;
+  font-weight: bold;
   padding: 1vw;
   text-decoration: none;
   font-size: 1vw;
-  line-height: 1.5vw;
+  line-height: 1vw;
   border-radius: 200px;
   text-transform: uppercase;
 }
 
-.header a.Name {
-  font-size: 2.8vw;
-  font-weight: bold;
-  border-color: white;
-  font-family: cursive;
+.active {
+  background-color: crimson;
   color: black;
-}
-
-.header a.active {
-  background-color: black;
-  color: white;
   width: auto;
   max-width: 100%;
 }
 
-.header-right {
-  float: right;
+li a:hover {
+  background-color: crimson;
+  color: black;
 }
 
 @media screen and (max-width: 500px) {
-  .header a {
-    /* float: none; */
+  li a {
     line-height: 6vw;
     margin: 5px;
-  }
-
-  .header-right {
-    /* float: none; */
   }
 }
 
@@ -66,7 +83,7 @@ body {
   margin-bottom: 4vw;
   height: 150px;
   background-color: #0c090a;
-  box-shadow: 6px 10px 15px #0074d9;
+  box-shadow: 8px 15px 18px crimson;
 }
 
 .image {
@@ -79,26 +96,28 @@ body {
 
 .info-container {
   text-align: left;
-  padding-left: 8%;
-  padding-right: 3%;
+  padding-left: 8vw;
+  padding-right: 4vw;
 }
 
 .title {
   font-weight: bold;
   font-size: 1.3vw;
   padding-top: 1%;
-  color: #0074d9;
+  color: crimson;
 }
 
 .date {
+  font-weight: bold;
   color: #837e7c;
   padding-bottom: 15px;
   font-style: oblique;
-  font-size: 0.7vw;
+  font-size: 0.9vw;
 }
 .info {
+  font-weight: bold;
   color: white;
-  font-size: 0.9vw;
+  font-size: 1vw;
 }
 
 .sort {
@@ -110,12 +129,12 @@ body {
   font-size: 1.5vw;
   font-weight: bold;
   border-style: hidden;
-  background-color: #3d3c3a;
-  color: #0074d9;
+  background-color: whitesmoke;
+  color: crimson;
 }
 
 .line {
-  border: 0.2px dotted #0074d9;
+  border: 0.2px dotted crimson;
   margin-top: 1%;
 }
 
@@ -126,19 +145,20 @@ body {
 .submit {
   width: 25vw;
   height: 60px;
+  font-weight: bold;
   border-style: hidden;
   border-radius: 20px;
-  font-size: 2vw;
+  font-size: 2.5vw;
   margin-top: 5%;
   margin-bottom: 8%;
-  background-color: #0074d9;
-  color: white;
+  background-color: crimson;
+  color: black;
 }
 
 .submit:hover {
   background-color: black;
-  color: white;
-  box-shadow: 0 12px 16px 0 #0074d9, 0 17px 50px 0 #0074d9;
+  color: crimson;
+  box-shadow: 0 12px 16px 0 crimson, 0 17px 50px 0 crimson;
 }
 
 .submit span {
@@ -167,23 +187,21 @@ body {
 }
 
 .footer {
-  background-color: #0074d9;
+  background-color: black;
+  text-align: center;
   overflow: hidden;
   margin: 0;
-  padding: 10px;
+  padding: 2vw;
 }
 
 .footer-info {
+  display: inline;
   font-size: 1vw;
-  text-align: center;
-  color: white;
+  font-weight: bold;
+  color: crimson;
 }
 
-.footer-image {
-  text-align: center;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50px;
-  max-width: 100%;
+.my-link {
+  color: crimson;
+  font-size: 1vw;
 }

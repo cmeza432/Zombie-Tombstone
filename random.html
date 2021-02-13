@@ -10,11 +10,11 @@
 <body>
     <!-- Class for the header with logo nested inside -->
     <div class="header">
-        <a class="name">Zombie Tombstone</a>
-        <div class="header-right">
-            <a href="index.html">Movies</a>
-            <a class="active" href="">Can't Decide?</a>
-        </div>
+        <h1 class="name">Zombie Tombstone</h1>
+        <ul>
+            <li><a href="index.html">Movies</a></li>
+            <li><a class="active" href="">Can't Decide?</a></li>
+        </ul>
     </div>
 
     <!-- Div for next two boxes, one containing about summary, the other scroll of news -->
@@ -23,13 +23,14 @@
             <h1 class="title">Generate a Movie recommendation</h1>
             <p class="summary">Can't figure out what to watch? Just click on the button below to generate a movie recommendation.</p>
         </div>
-        <button class="submit" onclick="getMovies()"><span>Generate</span></button>
     </div>
+    <button class="submit" onclick="getMovies()"><span>Generate</span></button>
 
     <!-- Footer for info and image -->
     <div class="footer">
-        <p class="footer-info">Created by Carlos Meza</p>
-        <img src="https://image.flaticon.com/icons/svg/547/547432.svg" class="footer-image">
+        <p class="footer-info">All rights reserved to 2021 </p>
+        <a class="my-link" href="">©Carlos Meza</a>
+        <!-- <img src="https://image.flaticon.com/icons/svg/547/547432.svg" class="footer-image"> -->
     </div>
 
     <script src="scripts/random.js"></script>
